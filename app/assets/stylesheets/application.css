@@ -19,19 +19,14 @@
  */
 
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
 body {
   background-image: url('http://adityamehta.in/wp-content/uploads/2014/08/Sky-Blue-Sky.jpg');
   /* Margin bottom by footer height */
   margin-bottom: 30px;
+  margin-top: 60px;
 }
-.footer {
-  position: absolute;
+footer {
+  position: fixed;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */

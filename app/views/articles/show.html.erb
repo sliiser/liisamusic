@@ -12,6 +12,9 @@
     <%= @article.user.name.presence || @article.user.email %>
   </p>
   <%= link_to 'Back', articles_path %>
-  <%= link_to 'Edit', edit_article_path(@article) if user_signed_in? %>
+  <% if user_signed_in? %>
+    | <%= link_to 'Edit', edit_article_path(@article) %>
+    | <%= link_to 'Destory', article_path(@article), method: :delete %>
+  <% end %>
   </div>
 </div>
