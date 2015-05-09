@@ -39,6 +39,7 @@ gem "twitter-bootstrap-rails"
 gem "font-awesome-rails"
 gem 'x-editable-rails'
 gem "wysiwyg-rails"
+gem 'masonry-rails'
 
 group :development do
   gem 'pry-rails'

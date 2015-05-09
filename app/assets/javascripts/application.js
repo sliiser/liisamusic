@@ -17,13 +17,29 @@
 //= require wysiwyg
 //= require editable/bootstrap-editable
 //= require editable/rails
+//= require masonry/jquery.masonry
+//= require masonry/jquery.imagesloaded.min
 
 
 $(function(){
   $('.editable').editable();
+  var $container = $('.masonry-container');
+  $container.imagesLoaded( function () {
+    $container.masonry({
+      //columnWidth: '.item',
+      itemSelector: '.item'
+    });
+  });
 })
 $(document).on("page:load", function(){
   $('.editable').editable();
+  var $container = $('.masonry-container');
+  $container.imagesLoaded( function () {
+    $container.masonry({
+      columnWidth: '.item',
+      itemSelector: '.item'
+    });
+  });
 })
 $.fn.editableform.buttons =
   '<button type="submit" class="btn btn-primary btn-sm editable-submit">'+
