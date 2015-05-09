@@ -1,0 +1,22 @@
+<div class="panel">
+  <table class="table table-striped">
+    <thead>
+      <th>Name key</th>
+      <th>Description</th>
+      <th>Value</th>
+      <th>&nbsp;</th>
+    </thead>
+    <tbody>
+      <% @settings.each do |setting| %>
+        <tr>
+          <td><%= setting.name_key %></td>
+          <td><%= editable setting, :description %></td>
+          <td><%= editable setting, :value %></td>
+          <td>
+            <%= link_to fa_icon('trash'), setting, method: :delete, class: 'btn btn-xs btn-danger' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

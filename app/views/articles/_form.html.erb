@@ -11,23 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: 'form-control' %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
 <script>
-  $(function() {
-    $('#article_body').editable({
+  $(document).ready(function(){
+    $('#article_body').wysiwyg_editable({
       //userFrTag: true,
-      inlineMode: false
+      inlineMode: false,
+      height: 300
     })
-  });
+  })
 </script>

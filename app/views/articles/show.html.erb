@@ -11,6 +11,10 @@
     <strong>By:</strong>
     <%= @article.user.name.presence || @article.user.email %>
   </p>
+  <p>
+    <strong>At:</strong>
+    <%= @article.created_at.to_formatted_s(:short) %>
+  </p>
   <%= link_to 'Back', articles_path %>
   <% if user_signed_in? %>
     | <%= link_to 'Edit', edit_article_path(@article) %>
