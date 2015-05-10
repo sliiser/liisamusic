@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
@@ -19,6 +20,9 @@
 //= require editable/rails
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
+//
+// Bower packages
+//= require responsive-bootstrap-toolkit
 
 
 $(function(){
@@ -27,20 +31,12 @@ $(function(){
   $container.imagesLoaded( function () {
     $container.masonry({
       //columnWidth: '.item',
+      isAnimated: true,
       itemSelector: '.item'
     });
   });
 })
-$(document).on("page:load", function(){
-  $('.editable').editable();
-  var $container = $('.masonry-container');
-  $container.imagesLoaded( function () {
-    $container.masonry({
-      columnWidth: '.item',
-      itemSelector: '.item'
-    });
-  });
-})
+
 $.fn.editableform.buttons =
   '<button type="submit" class="btn btn-primary btn-sm editable-submit">'+
     '<i class="fa fa-fw fa-check"></i>'+
@@ -48,3 +44,11 @@ $.fn.editableform.buttons =
   '<button type="button" class="btn btn-default btn-sm editable-cancel">'+
     '<i class="fa fa-fw fa-times"></i>'+
   '</button>';
+
+(function($, viewport){
+  $(window).resize(
+    viewport.changed(function(){
+      $('.masonry-container').masonry('reload');
+    })
+  );
+})(jQuery, ResponsiveBootstrapToolkit);

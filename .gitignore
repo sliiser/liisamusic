@@ -11,3 +11,6 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Get components from requirements
+/bower_components/

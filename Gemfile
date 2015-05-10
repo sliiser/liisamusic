@@ -40,6 +40,8 @@ gem "font-awesome-rails"
 gem 'x-editable-rails'
 gem "wysiwyg-rails"
 gem 'masonry-rails'
+gem 'jquery-turbolinks'
+gem 'bower'
 
 group :development do
   gem 'pry-rails'
