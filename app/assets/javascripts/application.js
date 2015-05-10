@@ -35,6 +35,7 @@ $(function(){
       itemSelector: '.item'
     });
   });
+  $('.article-body').find('img').addClass('img-responsive')
 })
 
 $.fn.editableform.buttons =
