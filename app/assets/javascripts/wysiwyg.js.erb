@@ -15,3 +15,11 @@
 
 $.fn.wysiwyg_editable = $.fn.editable;
 delete $.fn.editable;
+
+$(function(){
+  $('.wysiwyg-editable').wysiwyg_editable({
+    imageUploadURL: '/upload_image',
+    inlineMode: false,
+    height: 300
+  })
+})

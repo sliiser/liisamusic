@@ -52,7 +52,7 @@ class PagesController < ApplicationController
   end
 
   def upload_image
-    uploader = ArticleUploader.new
+    uploader = PictureUploader.new
     uploader.store!(params[:file])
     render json: { link: uploader.url }
   end
