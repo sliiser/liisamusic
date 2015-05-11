@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   end
   root to: "articles#index"
 
+  post '/upload_image', to: 'pages#upload_image'
   get '/:name_key', to: 'pages#show'
 end

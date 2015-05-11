@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
-  before_action :set_page, except: [:index, :new, :create]
+  before_action :set_page, except: [:index, :new, :create, :upload_image]
   before_action :authenticate_user!, except: :show
+  skip_before_action :verify_authenticity_token, only: :upload_image
 
   def index
     @pages = Page.all
@@ -48,6 +49,12 @@ class PagesController < ApplicationController
     @page.visible = true
     @page.save
     redirect_to pages_path
+  end
+
+  def upload_image
+    uploader = ArticleUploader.new
+    uploader.store!(params[:file])
+    render json: { link: uploader.url }
   end
 
   private

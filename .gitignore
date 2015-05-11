@@ -14,3 +14,6 @@
 
 # Get components from requirements
 /bower_components/
+
+# Ignore uploaded images
+/public/uploads/
