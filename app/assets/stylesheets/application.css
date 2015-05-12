@@ -25,11 +25,3 @@
  *= require 'masonry/right-to-left'
  *= require 'masonry/transitions'
  */
-
-
-body {
-  background-image: url('http://adityamehta.in/wp-content/uploads/2014/08/Sky-Blue-Sky.jpg');
-  /* Margin bottom by footer height */
-  margin-bottom: 40px;
-  margin-top: 60px;
-}
