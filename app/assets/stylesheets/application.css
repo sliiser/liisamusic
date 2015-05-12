@@ -24,4 +24,10 @@
  *= require 'masonry/infinitescroll'
  *= require 'masonry/right-to-left'
  *= require 'masonry/transitions'
+ *= require bg.scss
  */
+
+body{
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
