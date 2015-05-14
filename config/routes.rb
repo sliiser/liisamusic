@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       put :reveal
     end
   end
+  resources :mail_users, only: [:show, :new, :create, :destroy]
   root to: "articles#index"
 
   post '/upload_image', to: 'pages#upload_image'

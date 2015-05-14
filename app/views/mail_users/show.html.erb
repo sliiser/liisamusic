@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Unsubscribe from news
+  </div>
+  <div class="panel-body">
+    <p>
+      You requested to unsubscribe <%= @mail_user.email %> from news. <br>
+      You've been subscribed for <%= time_ago_in_words @mail_user.created_at %>.<br>
+      Are you sure you want to unsubscribe?
+      <%= button_to 'Unsubscribe', mail_user_path(@mail_user), method: :delete, class: 'btn btn-danger' %>
+    </p>
+  </div>
+</div>

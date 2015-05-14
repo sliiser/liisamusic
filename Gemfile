@@ -33,12 +33,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
-gem "font-awesome-rails"
+gem 'therubyracer'
+gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'twitter-bootstrap-rails'
+gem 'font-awesome-rails'
 gem 'x-editable-rails'
-gem "wysiwyg-rails"
+gem 'wysiwyg-rails'
 gem 'masonry-rails'
 gem 'jquery-turbolinks'
 gem 'bower'
