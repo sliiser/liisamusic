@@ -20,6 +20,7 @@
 //= require editable/rails
 //= require masonry/jquery.masonry
 //= require masonry/jquery.imagesloaded.min
+//= require bit_widget
 //
 // Bower packages
 //= require responsive-bootstrap-toolkit
