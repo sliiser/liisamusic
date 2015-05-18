@@ -1,5 +1,11 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
   <body>
     <%= yield %>
+    <br>
+    <%= link_to 'Unsubscribe', mail_user_url(@mail_user) %>
   </body>
 </html>
